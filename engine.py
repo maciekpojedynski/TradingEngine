@@ -1,3 +1,10 @@
+import logging
+
+logging.basicConfig(
+    level = logging.INFO,
+    format = '%(asctime)s - %(levelname)s - %(message)s'
+)
+
 class TradingEngine:
     def __init__(self, price: list[int]):
         self.prices = price
@@ -14,26 +21,33 @@ class TradingEngine:
 
     def max_revenue_v2(self) -> int:
         "Sliding window: O(n) time, O(1) memory"
-        max_revenue = 0
-        min_price = float('inf')
 
-        for index in range(0, len(self.prices)):
-            if self.prices[index] < min_price:
-                min_price = self.prices[index]
-            else:
+        logging.info("TradingEngine waking up...")
+        if not self.prices or len(self.prices) < 2:
+            logging.error("The list has too few elements and cannot be processed")
+            return 0
+        else:
+            max_revenue = float('-inf')
+            min_price = float('inf')
+
+            for index in range(0, len(self.prices)):
                 revenue = self.prices[index] - min_price
                 if revenue > max_revenue:
                     max_revenue = revenue
+                if self.prices[index] < min_price:
+                    min_price = self.prices[index]
 
-        return max_revenue
+            logging.info(f"Return from investment is equal to {max_revenue}")
+            return max_revenue
+
 
 if __name__ == '__main__':
-    test_v1 = [105, 102, 103, 101, 104, 110, 100, 108]
+    test_v1 = [100, 90, 80, 70, 50]
     engine = TradingEngine(test_v1)
     result_1 = engine.max_revenue_v1()
     result_2 = engine.max_revenue_v2()
     print(f"result_v1: {result_1}")
-    print(f"result_v1: {result_2}")
+    print(f"result_v2: {result_2}")
 
 
 

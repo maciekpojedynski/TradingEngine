@@ -46,7 +46,7 @@ def upload_to_gcs(bucket_name: str, data: dict, destination_blob_name: str):
     
     blob = bucket.blob(destination_blob_name)
     
-    json_data_string = json.dumps(data)
+    json_data_string = json.dumps(data) + "\n"
     
     blob.upload_from_string(
           json_data_string

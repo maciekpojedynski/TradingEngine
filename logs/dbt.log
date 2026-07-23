@@ -1,0 +1,167 @@
+[0m15:28:00.384418 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105a496a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c474d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c47390>]}
+
+
+============================== 15:28:00.387364 | aafd15e1-7c98-40d1-994e-84ececafa1e6 ==============================
+[0m15:28:00.387364 [info ] [MainThread]: Running with dbt=1.12.0
+[0m15:28:00.387672 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'cache_selected_only': 'False', 'no_print': 'None', 'debug': 'False', 'maximum_seed_size_mib': '1', 'partial_parse': 'True', 'target_path': 'None', 'printer_width': '80', 'use_experimental_parser': 'False', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'invocation_command': 'dbt init trading_dbt', 'fail_fast': 'False', 'static_parser': 'True', 'introspect': 'True', 'warn_error': 'None', 'log_path': 'logs', 'indirect_selection': 'eager', 'empty': 'None', 'hints_enabled': 'True', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/Users/maciek/.dbt', 'log_cache_events': 'False', 'version_check': 'True', 'log_format': 'default'}
+[0m15:28:00.397579 [info ] [MainThread]: Creating dbt configuration folder at /Users/maciek/.dbt
+[0m15:28:00.399531 [debug] [MainThread]: Starter project path: /Users/maciek/Documents/TradingEngine/.venv/lib/python3.13/site-packages/dbt/include/starter_project
+[0m15:28:00.404402 [info ] [MainThread]: Setting up your profile.
+[0m15:38:55.509299 [info ] [MainThread]: Profile trading_dbt written to /Users/maciek/.dbt/profiles.yml using target's profile_template.yml and your supplied values.
+[0m15:38:55.524427 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m15:38:55.525720 [info ] [MainThread]: dbt version: 1.12.0
+[0m15:38:55.525889 [info ] [MainThread]: python version: 3.13.2
+[0m15:38:55.526019 [info ] [MainThread]: python path: /Users/maciek/Documents/TradingEngine/.venv/bin/python3.13
+[0m15:38:55.526164 [info ] [MainThread]: os info: macOS-15.1-arm64-arm-64bit-Mach-O
+[0m15:38:55.569592 [info ] [MainThread]: Using profiles dir at /Users/maciek/.dbt
+[0m15:38:55.569871 [info ] [MainThread]: Using profiles.yml file at /Users/maciek/.dbt/profiles.yml
+[0m15:38:55.570035 [info ] [MainThread]: Using dbt_project.yml file at /Users/maciek/Documents/TradingEngine/trading_dbt/dbt_project.yml
+[0m15:38:55.570186 [info ] [MainThread]: adapter type: bigquery
+[0m15:38:55.570299 [info ] [MainThread]: adapter version: 1.12.0
+[0m15:38:55.621176 [info ] [MainThread]: Configuration:
+[0m15:38:55.621384 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:38:55.621507 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m15:38:55.621614 [info ] [MainThread]: Required dependencies:
+[0m15:38:55.621798 [debug] [MainThread]: Executing "git --help"
+[0m15:38:55.652120 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:38:55.652599 [debug] [MainThread]: STDERR: "b''"
+[0m15:38:55.652761 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:38:55.652915 [info ] [MainThread]: Connection:
+[0m15:38:55.653072 [info ] [MainThread]:   method: service-account
+[0m15:38:55.653183 [info ] [MainThread]:   database: trading-engine-platform
+[0m15:38:55.653287 [info ] [MainThread]:   execution_project: trading-engine-platform
+[0m15:38:55.653390 [info ] [MainThread]:   schema: trading_silver
+[0m15:38:55.653488 [info ] [MainThread]:   location: EU
+[0m15:38:55.653582 [info ] [MainThread]:   priority: interactive
+[0m15:38:55.653682 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m15:38:55.653777 [info ] [MainThread]:   reservation: None
+[0m15:38:55.653871 [info ] [MainThread]:   impersonate_service_account: None
+[0m15:38:55.653968 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m15:38:55.654061 [info ] [MainThread]:   job_retries: 1
+[0m15:38:55.654155 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m15:38:55.654248 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m15:38:55.654342 [info ] [MainThread]:   job_link_info_level_log: False
+[0m15:38:55.654437 [info ] [MainThread]:   timeout_seconds: 300
+[0m15:38:55.654555 [info ] [MainThread]:   client_id: None
+[0m15:38:55.654647 [info ] [MainThread]:   token_uri: None
+[0m15:38:55.654740 [info ] [MainThread]:   compute_region: None
+[0m15:38:55.654833 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m15:38:55.654927 [info ] [MainThread]:   gcs_bucket: None
+[0m15:38:55.655034 [info ] [MainThread]:   dataproc_batch: None
+[0m15:38:55.655420 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m15:38:55.774122 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m15:38:55.774471 [debug] [MainThread]: On debug: select 1 as id
+[0m15:38:55.774710 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:38:55.774938 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery " "client: '[Errno 2] No such file or directory: 'gcp-keys.json''
+[0m15:38:55.775102 [debug] [MainThread]: BigQuery adapter: Unhandled error while running:
+select 1 as id
+[0m15:38:55.775216 [debug] [MainThread]: BigQuery adapter: Database Error
+  [Errno 2] No such file or directory: 'gcp-keys.json'
+[0m15:38:55.775341 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m15:38:55.775487 [info ] [MainThread]: [31m1 check failed:[0m
+[0m15:38:55.775597 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >'NoneType' object has no attribute 'close'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m15:38:55.775744 [info ] [MainThread]: Your new dbt project "trading_dbt" was created!
+Initialized new project in /Users/maciek/Documents/TradingEngine/trading_dbt/trading_dbt
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:38:55.775883 [info ] [MainThread]: [31mYour profile may need adjustments. You can find the logs of `dbt debug` above[0m
+[0m15:38:55.783825 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 655.4532, "process_in_blocks": "0", "process_kernel_time": 0.440285, "process_mem_max_rss": "182255616", "process_out_blocks": "0", "process_user_time": 1.389842}
+[0m15:38:55.784994 [debug] [MainThread]: Command `dbt init` succeeded at 15:38:55.784829 after 655.46 seconds
+[0m15:38:55.785311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127e55220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127e417f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127e6d150>]}
+[0m15:38:55.785579 [debug] [MainThread]: Flushing usage events
+[0m15:38:56.399946 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:50:51.461233 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063816a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10770b4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10770b390>]}
+
+
+============================== 15:50:51.464313 | 8c54c613-1ed2-41fa-9df8-67218eac5364 ==============================
+[0m15:50:51.464313 [info ] [MainThread]: Running with dbt=1.12.0
+[0m15:50:51.464619 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'warn_error': 'None', 'debug': 'False', 'partial_parse': 'True', 'log_path': 'logs', 'profiles_dir': '/Users/maciek/.dbt', 'fail_fast': 'False', 'empty': 'None', 'target_path': 'None', 'hints_enabled': 'True', 'cache_selected_only': 'False', 'static_parser': 'True', 'write_json': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'maximum_seed_size_mib': '1', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'introspect': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'log_cache_events': 'False', 'log_format': 'default', 'printer_width': '80', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m15:50:51.475703 [info ] [MainThread]: dbt version: 1.12.0
+[0m15:50:51.475888 [info ] [MainThread]: python version: 3.13.2
+[0m15:50:51.476010 [info ] [MainThread]: python path: /Users/maciek/Documents/TradingEngine/.venv/bin/python3.13
+[0m15:50:51.476123 [info ] [MainThread]: os info: macOS-15.1-arm64-arm-64bit-Mach-O
+[0m15:50:52.203754 [info ] [MainThread]: Using profiles dir at /Users/maciek/.dbt
+[0m15:50:52.204004 [info ] [MainThread]: Using profiles.yml file at /Users/maciek/.dbt/profiles.yml
+[0m15:50:52.204157 [info ] [MainThread]: Using dbt_project.yml file at /Users/maciek/Documents/TradingEngine/dbt_project.yml
+[0m15:50:52.204295 [info ] [MainThread]: adapter type: bigquery
+[0m15:50:52.204412 [info ] [MainThread]: adapter version: 1.12.0
+[0m15:50:52.204542 [info ] [MainThread]: Configuration:
+[0m15:50:52.204656 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:50:52.204766 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m15:50:52.204879 [info ] [MainThread]: Required dependencies:
+[0m15:50:52.205040 [debug] [MainThread]: Executing "git --help"
+[0m15:50:52.223449 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:50:52.223929 [debug] [MainThread]: STDERR: "b''"
+[0m15:50:52.224078 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:50:52.224229 [info ] [MainThread]: Connection:
+[0m15:50:52.224382 [info ] [MainThread]:   method: service-account
+[0m15:50:52.224498 [info ] [MainThread]:   database: trading-engine-platform
+[0m15:50:52.224602 [info ] [MainThread]:   execution_project: trading-engine-platform
+[0m15:50:52.224701 [info ] [MainThread]:   schema: trading_silver
+[0m15:50:52.224802 [info ] [MainThread]:   location: EU
+[0m15:50:52.224902 [info ] [MainThread]:   priority: interactive
+[0m15:50:52.225005 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m15:50:52.225102 [info ] [MainThread]:   reservation: None
+[0m15:50:52.225201 [info ] [MainThread]:   impersonate_service_account: None
+[0m15:50:52.225299 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m15:50:52.225394 [info ] [MainThread]:   job_retries: 1
+[0m15:50:52.225493 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m15:50:52.225587 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m15:50:52.225685 [info ] [MainThread]:   job_link_info_level_log: False
+[0m15:50:52.225779 [info ] [MainThread]:   timeout_seconds: 300
+[0m15:50:52.225875 [info ] [MainThread]:   client_id: None
+[0m15:50:52.225971 [info ] [MainThread]:   token_uri: None
+[0m15:50:52.226062 [info ] [MainThread]:   compute_region: None
+[0m15:50:52.226157 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m15:50:52.226252 [info ] [MainThread]:   gcs_bucket: None
+[0m15:50:52.226343 [info ] [MainThread]:   dataproc_batch: None
+[0m15:50:52.226658 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m15:50:52.290770 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m15:50:52.291105 [debug] [MainThread]: On debug: select 1 as id
+[0m15:50:52.291304 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:50:52.963462 [error] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trading-engine-platform&j=bq:EU:dde84a20-9bd4-412e-a68d-8e6ead49af21&page=queryresults
+[0m15:50:52.967500 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m15:50:52.968145 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m15:50:52.968546 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/maciek/Documents/TradingEngine/dbt_project.yml> not found
+
+[0m15:50:52.968933 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  Access Denied: Project trading-engine-platform: User does not have bigquery.jobs.create permission in project trading-engine-platform.
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m15:50:52.973794 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 1.5639915, "process_in_blocks": "0", "process_kernel_time": 0.28809, "process_mem_max_rss": "223248384", "process_out_blocks": "0", "process_user_time": 1.119803}
+[0m15:50:52.974610 [debug] [MainThread]: Command `dbt debug` failed at 15:50:52.974479 after 1.57 seconds
+[0m15:50:52.975178 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m15:50:52.975686 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x115724e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1156e31d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11570d260>]}
+[0m15:50:52.976364 [debug] [MainThread]: Flushing usage events
+[0m15:50:53.564505 [debug] [MainThread]: An error was encountered while trying to flush usage events

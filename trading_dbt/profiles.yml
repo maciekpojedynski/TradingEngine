@@ -1,0 +1,12 @@
+trading_dbt:
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: trading-engine-platform
+      dataset: trading_silver
+      keyfile: /Users/maciek/Documents/TradingEngine/dbt-keys.json
+      threads: 4
+      timeout_seconds: 300
+      location: europe-central2
+  target: dev

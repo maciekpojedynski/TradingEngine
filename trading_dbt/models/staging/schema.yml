@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_trades
+    description: "Wyczyszczona warstwa silver z transakcjami."
+    columns:
+      - name: ticker
+        description: "Symbol instrumentu."
+        data_tests:
+          - not_null
+
+      - name: trade_price
+        description: "Cena transakcji."
+        data_tests:
+          - not_null
+
+      - name: traded_at
+        description: "Czas transakcji."
+        data_tests:
+          - not_null

@@ -1,0 +1,10 @@
+
+version: 2
+
+sources:
+ - name: trading_bronze
+   database: trading-engine-platform
+   schema: trading_bronze
+   tables:
+    - name: trading_events
+      description: "Raw transaction data downloaded via API and saved on GCS in JSONL format."
